@@ -6,7 +6,8 @@ Can be invoked through Command Pallete (Cmd+Shift+P) by invoking the `j2j` comma
 
 ### example
 input: 
-``` @JsonProperty("identified")
+``` 
+ @JsonProperty("identified")
  private Long id;
  
  @JsonProperty("honorific")
@@ -17,14 +18,20 @@ input:
  
  private String date;
  
- private String userName;```
+ private String userName;
+ ```
+
+
 
 output:
-```{
+
+```
+{
   "date": "date",
   "id": "id",
   "title": "title",
   "url": "url",
   "userName": "userName"
-}```
+}
+```
 
