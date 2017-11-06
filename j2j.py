@@ -9,7 +9,7 @@ class J2jCommand(sublime_plugin.TextCommand):
 		lines = content.split('\n')
 
 		filtered = filter(lambda entry: filter_out(entry), lines)
-		fields = list(map(lambda entry: re.search('^\s*([a-zA-z<>]*\s){1,3}(?P<field>\w+)(\s?=\s?.*);', entry).group('field'), filtered))
+		fields = list(map(lambda entry: re.search('^\s*([a-zA-z<>]*\s){1,3}(?P<field>\w+)(\s?=\s?.*)*;', entry).group('field'), filtered))
 		formatted_fields  = list(map(lambda entry: format_field(entry), fields))
 		builtContent = '\n'.join(formatted_fields)[:-1]
 		finalContent = '{' + builtContent + '}'
