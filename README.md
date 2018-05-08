@@ -19,6 +19,10 @@ input:
  private String date;
  
  private String userName;
+
+ private Map<String, String> map;
+
+ private boolean isTrue;
  ```
 
 
@@ -28,7 +32,9 @@ output:
 ```
 {
   "date": "date",
-  "id": "id",
+  "id": 9999999,
+  "isTrue": true,
+  "map": "{}",
   "title": "title",
   "url": "url",
   "userName": "userName"
