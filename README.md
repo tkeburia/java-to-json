@@ -7,22 +7,21 @@ Can be invoked through Command Pallete (Cmd+Shift+P) by invoking the `j2j` comma
 ### example
 input: 
 ``` 
- @JsonProperty("identified")
- private Long id;
- 
- @JsonProperty("honorific")
- private String title;
- 
- @JsonProperty("targetUrl")
- private String url;
- 
- private String date;
- 
- private String userName;
+package org.example;
 
- private Map<String, String> map;
+import lombok.Data;
 
- private boolean isTrue;
+@Data
+public class MyClass
+{
+    private final String customerId;
+    private final Long webId;
+    private final String isoCode;
+    private final String serialNumber;
+    private final Date purchaseDate;
+    private final Boolean channel;
+}
+
  ```
 
 
@@ -31,13 +30,12 @@ output:
 
 ```
 {
-  "date": "date",
-  "id": 9999999,
-  "isTrue": true,
-  "map": "{}",
-  "title": "title",
-  "url": "url",
-  "userName": "userName"
+  "channel": true,
+  "customerId": "test_value",
+  "isoCode": "test_value",
+  "purchaseDate": "01-01-2010",
+  "serialNumber": "test_value",
+  "webId": 9999999
 }
 ```
 
